@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mini Golf</title>
+    <link rel="icon" href="https://us.123rf.com/450wm/martialred/martialred1809/martialred180900005/108396845-stock-vector-golf-course-green-with-flag-or-flagstick-and-golf-ball-flat-vector-color-icon-for-sports-apps-and-we.jpg?ver=6">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body style="background-color:#007F00;">
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+   	
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+	
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+	  <script>
+		  // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBgJcYWYno2JLIW7zwhCia_v3uzLSBv3r8",
+      authDomain: "minigolf-68045.firebaseapp.com",
+      databaseURL: "https://minigolf-68045.firebaseio.com",
+      projectId: "minigolf-68045",
+      storageBucket: "minigolf-68045.appspot.com",
+      messagingSenderId: "712870243899",
+      appId: "1:712870243899:web:8341db69571e2881b2361e",
+      measurementId: "G-G7HXKRV56T"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+	  //var provider = new firebase.auth.GoogleAuthProvider();
+
+  </script>
+
+    <script id = "gameType"></script>
+    <script>
+    var input = "0"
+    while (input != "1" && input != "2" && input != "3") {
+      input = window.prompt("Choose one of the following: create a room (1), join a room (2), play locally (3)")
+    }
+    if (input === "3") {
+      document.getElementById("gameType").src = "script.js"
+    }
+    else if (input === "2") {
+      document.getElementById("gameType").src = "join.js"
+    }
+    else {
+      document.getElementById("gameType").src = "create.js"
+    }
+    </script>
+  </body>
+</html>
