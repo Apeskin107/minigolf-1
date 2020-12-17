@@ -93,7 +93,7 @@ function draw() {
   fill(255)
   textSize(16)
   textAlign(RIGHT)
-  text('Version Alpha 1.0.1   © 2020 Aaron Peskin', 1520, 1030)
+  text('Version Alpha 1.0.1   © 2020 Aaron Peskin & Co.', 1520, 1030)
 
   textSize(32)
   text("Hole " + curHole, 1520, 45)
@@ -496,12 +496,6 @@ function generateCourse() {
     }
   }
   
-
-  // for(var i = 0; i < 8; i++) {
-  //     for(var j = 0; j < 8; j++) {
-  //       grid[i][j] = 1
-  //     }
-  //   }
   for(var i = 0; i < 8; i++) {
     output = ""
     for(var j = 0; j < 8; j++) {
